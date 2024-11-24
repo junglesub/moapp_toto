@@ -39,6 +39,7 @@ class LandingPage extends StatelessWidget {
                 CustomFullWidthButton(
                     label: "구글로 계속",
                     height: 59,
+                    padding: 48,
                     onPressed: () {
                       Navigator.pushNamed(context, '/signIn');
                     }),
