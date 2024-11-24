@@ -5,18 +5,20 @@ class CustomFullWidthButton extends StatelessWidget {
   final String label;
   final VoidCallback onPressed;
   final double? height;
+  final double? padding;
 
-  const CustomFullWidthButton({
-    Key? key,
-    required this.label,
-    required this.onPressed,
-    this.height,
-  }) : super(key: key);
+  const CustomFullWidthButton(
+      {Key? key,
+      required this.label,
+      required this.onPressed,
+      this.height,
+      this.padding})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 48.0),
+      padding: EdgeInsets.symmetric(horizontal: (padding ?? 0)),
       child: SizedBox(
         width: double.infinity,
         height: height,
